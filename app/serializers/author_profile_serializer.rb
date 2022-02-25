@@ -1,0 +1,5 @@
+class AuthorProfileSerializer < ActiveModel::Serializer
+    attributes :username, :email, :bio, :avatar_url
+    has_one :profile, serializer: AuthorProfileSerializer
+  end
+  
